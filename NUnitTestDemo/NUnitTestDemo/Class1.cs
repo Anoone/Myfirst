@@ -17,11 +17,18 @@ namespace NUnitTestDemo
             Assert.AreEqual(5,math.Add(2,3));
         }
 
-            [TestCase]
+        [TestCase]
             public void Sub()
         {
             MyMath math = new MyMath();
             Assert.AreEqual(1,math.Sub(3,2));
+        }
+
+        [TestCase]
+        public void Mul()
+        {
+            MyMath math = new MyMath();
+            Assert.AreEqual(20, math.Mul(4, 5));
         }
 
     }
