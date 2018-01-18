@@ -31,5 +31,13 @@ namespace NUnitTestDemo
             Assert.AreEqual(20, math.Mul(4, 5));
         }
 
+        [TestCase]
+        public void Div()
+        {
+            MyMath math = new MyMath();
+            Assert.AreEqual(5, math.Div(25, 5));
+        }
+
+
     }
 }
