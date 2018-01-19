@@ -19,6 +19,20 @@ namespace PankkitiliSovellus
             Pankkitili pankkitili1 = new Pankkitili(int.Parse(alkusaldo));
 
             Console.WriteLine("Tilin 01 alkusaldo on : " + pankkitili1.Saldo);
+
+            Console.WriteLine("Anna nostettava rahamäärä");
+
+            string rahamaara = Console.ReadLine();
+
+            try
+            {
+                pankkitili1.Nosta(int.Parse(rahamaara));
+                Console.WriteLine("Tilin 01 saldo on : " + pankkitili1.Saldo);
+            }
+            catch (ArgumentException ex)
+            {
+                Console.WriteLine("Tilillä ei ole nostovaraa");
+            }
         }
     }
 }
