@@ -20,5 +20,10 @@ namespace PankkitiliSovellus
             //Saldo = Saldo + amount
             Saldo += amount;
         }
-       }
+        public void Nosta(int amount)
+        {
+            //Saldo = Saldo + amount
+            Saldo -= amount;
+        }
+    }
 }

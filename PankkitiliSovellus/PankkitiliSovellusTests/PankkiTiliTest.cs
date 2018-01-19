@@ -23,7 +23,7 @@ namespace PankkitiliSovellusTests
         */
 
         public Pankkitili tili1 = null;
-
+        //TearDown
         [SetUp]
         public void TestienAlustaja()
         {
@@ -52,6 +52,15 @@ namespace PankkitiliSovellusTests
             tili1.Talleta(550);
             //testataan arvon yhtäsuuruutta
             Assert.That(650, Is.EqualTo(tili1.Saldo));
+        }
+
+        [Test]
+        public void Nosto()
+        {
+            // tallennetaan rahaa tilille
+            tili1.Nosta(50);
+            //testataan arvon yhtäsuuruutta
+            Assert.That(50, Is.EqualTo(tili1.Saldo));
         }
 
     }
