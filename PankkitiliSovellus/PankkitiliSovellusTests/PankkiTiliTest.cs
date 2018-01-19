@@ -21,10 +21,19 @@ namespace PankkitiliSovellusTests
          * siirtää rahaa pankkitilitä toiselle
          * tarkisteta ettei tili mene miinukselle
         */
+
+        public Pankkitili tili1 = null;
+
+        [SetUp]
+        public void TestienAlustaja()
+        {
+               this.tili1 = new Pankkitili(100);
+        }
+
         [Test]
         public void Luotili()
         {
-            Pankkitili tili1 = new Pankkitili(100);
+
             //testataan olion luokan tyyppi
             Assert.IsInstanceOf<Pankkitili>(tili1);
         }
@@ -32,19 +41,17 @@ namespace PankkitiliSovellusTests
         [Test]
         public void Alkusaldo()
         {
-            Pankkitili tili1 = new Pankkitili(500);
             //testataan arvon yhtäsuuruutta
-            Assert.That(500, Is.EqualTo(tili1.Saldo));
+            Assert.That(100, Is.EqualTo(tili1.Saldo));
         }
 
         [Test]
         public void Talletus()
         {
-            Pankkitili tili1 = new Pankkitili(350);
             // tallennetaan rahaa tilille
             tili1.Talleta(550);
             //testataan arvon yhtäsuuruutta
-            Assert.That(900, Is.EqualTo(tili1.Saldo));
+            Assert.That(650, Is.EqualTo(tili1.Saldo));
         }
 
     }
