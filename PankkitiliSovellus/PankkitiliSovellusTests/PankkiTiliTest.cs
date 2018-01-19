@@ -1,4 +1,5 @@
 ﻿using NUnit.Framework;
+using PankkitiliSovellus;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,7 +25,7 @@ namespace PankkitiliSovellusTests
         public void CreateBackAccount()
         {
             Pankkitili tili1 = new Pankkitili();
-            //Assert.That(2, Is.EqualTo(2));
+            Assert.IsInstanceOf<Pankkitili>(tili1);
         }
 
     }
