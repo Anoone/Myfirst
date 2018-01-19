@@ -22,10 +22,19 @@ namespace PankkitiliSovellusTests
          * tarkisteta ettei tili mene miinukselle
         */
         [Test]
-        public void CreateBackAccount()
+        public void Luotili()
         {
-            Pankkitili tili1 = new Pankkitili();
+            Pankkitili tili1 = new Pankkitili(100);
+            //testataan olion luokan tyyppi
             Assert.IsInstanceOf<Pankkitili>(tili1);
+        }
+
+        [Test]
+        public void Alkusaldo()
+        {
+            Pankkitili tili1 = new Pankkitili(500);
+
+            Assert.That(500, Is.EqualTo(tili1.Saldo));
         }
 
     }
