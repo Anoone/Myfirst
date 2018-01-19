@@ -13,15 +13,12 @@ namespace PankkitiliSovellus
             Console.WriteLine("Pankkitilisovellus_v1");
 
             Console.WriteLine("Anna alkusaldon määrä");
-
             string alkusaldo = Console.ReadLine();
 
             Pankkitili pankkitili1 = new Pankkitili(int.Parse(alkusaldo));
-
             Console.WriteLine("Tilin 01 alkusaldo on : " + pankkitili1.Saldo);
-
+            
             Console.WriteLine("Anna nostettava rahamäärä");
-
             string rahamaara = Console.ReadLine();
 
             try
