@@ -27,7 +27,7 @@ namespace PankkitiliSovellusTests
         [SetUp]
         public void TestienAlustaja()
         {
-               this.tili1 = new Pankkitili(100);
+            this.tili1 = new Pankkitili(100);
         }
 
         [Test]
@@ -57,11 +57,24 @@ namespace PankkitiliSovellusTests
         [Test]
         public void Nosto()
         {
-            // tallennetaan rahaa tilille
+            // nostetaan rahaa tilille
             tili1.Nosta(50);
             //testataan arvon yhtäsuuruutta
             Assert.That(50, Is.EqualTo(tili1.Saldo));
         }
 
+        [Test]
+        public void EiMiinukselle()
+        {
+
+            //testataan antaako ohjelma halutun virhetyypin
+            Assert.Throws<ArgumentException>(() => tili1.Nosta(200));
+            //vaikka virhe sattuu niin rahoja ei menetä
+            //Loppusaldon pitäisi pysyä samana
+            Assert.That(100, Is.EqualTo(tili1.Saldo));
+
+
+
+        }
     }
 }

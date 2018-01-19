@@ -22,6 +22,10 @@ namespace PankkitiliSovellus
         }
         public void Nosta(int amount)
         {
+            if(Saldo - amount < 0)
+            {
+                throw new ArgumentException("Tilillä ei ole tarpeeksi nostovaraa.");
+            }
             //Saldo = Saldo + amount
             Saldo -= amount;
         }
