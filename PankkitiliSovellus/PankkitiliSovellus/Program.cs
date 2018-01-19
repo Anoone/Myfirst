@@ -8,6 +8,17 @@ namespace PankkitiliSovellus
 {
     class Program
     {
-        static void Main(string[] args) { }
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Pankkitilisovellus_v1");
+
+            Console.WriteLine("Anna alkusaldon määrä");
+
+            string alkusaldo = Console.ReadLine();
+
+            Pankkitili pankkitili1 = new Pankkitili(int.Parse(alkusaldo));
+
+            Console.WriteLine("Tilin 01 alkusaldo on : " + pankkitili1.Saldo);
+        }
     }
 }
