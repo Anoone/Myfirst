@@ -35,6 +35,14 @@ namespace TestCircle
             Console.WriteLine("The circle has radius of "
                + c3.getRadius() + " and area of " + c3.getArea()
                + "and color of " + c3.getColour());
+
+            Console.WriteLine(" ");
+            Circle c4 = new Circle();   // construct an instance of Circle
+            c4.setRadius(5.0);          // change radius
+            Console.WriteLine("radius is: " + c4.getRadius()); // Print radius via getter
+            c4.setColour("purple");        // Change colour
+            Console.WriteLine("color is: " + c4.getColour());   // Print color via getter
+
         }
     }
 }

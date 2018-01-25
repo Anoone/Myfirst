@@ -21,16 +21,16 @@ namespace TestCircle
         }
 
         // 2nd constructor with given radius, but color default
-        public Circle(double r)
+        public Circle(double radius)
         {
-            radius = r;
+            this.radius = radius;
             colour = "red";
         }
 
         // 3rd constructor to construct a new instance of Circle with the given radius and color
-        public Circle(double r, String c)
+        public Circle(double radius, String ccolour)
         {
-            radius = r;
+            this.radius = radius;
             colour = "blue";
         }
 
@@ -51,6 +51,18 @@ namespace TestCircle
         {
             return colour;
 
+        }
+
+        // Setter for instance variable radius
+        public void setRadius(double newRadius)
+        {
+            radius = newRadius;
+        }
+
+        // Setter for instance variable color
+        public void setColour(String newColour)
+        {
+            colour = newColour;
         }
     }
 }
