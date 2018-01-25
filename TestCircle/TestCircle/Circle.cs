@@ -64,5 +64,12 @@ namespace TestCircle
         {
             colour = newColour;
         }
+
+        // Return a description of this instance in the form of
+        // Circle[radius=r,color=c]
+        public String toString()
+        {
+            return "Circle[radius=" + radius + " colour=" + colour + "]";
+        }
     }
 }
