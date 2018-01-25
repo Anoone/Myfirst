@@ -10,7 +10,7 @@ namespace TestCircle
     {  // Save as "Circle.java"
        // private instance variable, not accessible from outside this class
         private double radius;
-        private String color;
+        private String colour;
 
         // The default constructor with no argument.
         // It sets the radius and color to their default value.
