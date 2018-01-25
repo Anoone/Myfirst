@@ -27,6 +27,13 @@ namespace TestCircle
             color = "red";
         }
 
+        // 3rd constructor to construct a new instance of Circle with the given radius and color
+        public Circle(double r, String c)
+        {
+            radius = r;
+            color = "blue";
+        }
+
         // A public method for retrieving the radius
         public double getRadius()
         {

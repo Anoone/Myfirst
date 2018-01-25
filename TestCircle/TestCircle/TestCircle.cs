@@ -8,6 +8,7 @@ namespace TestCircle
 {
     public class TestCircle
     {  // Save as "TestCircle.java"
+
         public static void Main(String[] args)
         {
             // Declare an instance of Circle class called c1.
@@ -21,10 +22,16 @@ namespace TestCircle
             // Declare an instance of class circle called c2.
             // Construct the instance c2 by invoking the second constructor
             // with the given radius and default color.
-            Circle c2 = new Circle(2.0);
+            Circle c2 = new Circle(1.5);
             // Invoke public methods on instance c2, via dot operator.
             Console.WriteLine("The circle has radius of "
                + c2.getRadius() + " and area of " + c2.getArea());
+
+
+            Circle c3 = new Circle(3.0,"blue");
+
+            Console.WriteLine("The circle has radius of "
+               + c3.getRadius() + " and area of " + c3.getArea());
         }
     }
 }
