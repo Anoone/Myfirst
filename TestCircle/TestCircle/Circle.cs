@@ -17,21 +17,21 @@ namespace TestCircle
         public Circle()
         {
             radius = 1.0;
-            color = "red";
+            colour = "green";
         }
 
         // 2nd constructor with given radius, but color default
         public Circle(double r)
         {
             radius = r;
-            color = "red";
+            colour = "red";
         }
 
         // 3rd constructor to construct a new instance of Circle with the given radius and color
         public Circle(double r, String c)
         {
             radius = r;
-            color = "blue";
+            colour = "blue";
         }
 
         // A public method for retrieving the radius
@@ -44,6 +44,13 @@ namespace TestCircle
         public double getArea()
         {
             return radius * radius * Math.PI;
+        }
+
+        // Getter for instance variable color
+        public String getColour()
+        {
+            return colour;
+
         }
     }
 }
